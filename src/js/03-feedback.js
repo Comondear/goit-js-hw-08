@@ -32,8 +32,11 @@ initPage();
 
 function onFormSubmit(e) {
   e.preventDefault();
+  const { elements: { email, message } } = e.currentTarget;
+  console.log({ email: email.value, message: message.value });
   localStorage.removeItem(STORAGE_KEY);
   e.currentTarget.reset();
+
 }
 
 function onFormInput(e) {
