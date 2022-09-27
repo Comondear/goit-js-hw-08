@@ -35,30 +35,30 @@ function createGallery(gallery) {
 
 console.log(pictureMap);
 
-container.addEventListener('click', onImgClick)
-
-function onImgClick(evt) {
-    evt.preventDefault();
-
-    if (evt.target.nodeName !== "IMG") {
-        return;
-    }
-
-    const instance = basicLightbox.create(`
-    <img src="${evt.target.dataset.source}" >
-`)
-    instance.show()
-    
-    container.addEventListener('keydown', (evt) => {
-        if (evt.code === 'Escape') {
-            instance.close();
-        }
-    });
-}
-
 var lightbox = new SimpleLightbox('.gallery a', {
   /* options */
   captionsData: 'alt',
   captionDelay: 250,
 });
+
+// container.addEventListener('click', onImgClick)
+
+// function onImgClick(evt) {
+//     evt.preventDefault();
+
+//     if (evt.target.nodeName !== "IMG") {
+//         return;
+//     }
+
+//     const instance = basicLightbox.create(`
+//     <img src="${evt.target.dataset.source}" >
+// `)
+//     instance.show()
+    
+//     container.addEventListener('keydown', (evt) => {
+//         if (evt.code === 'Escape') {
+//             instance.close();
+//         }
+//     });
+// }
 
